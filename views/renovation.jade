@@ -1,0 +1,264 @@
+extends layout
+
+block content
+    div.l-content
+        div.main-section
+            h2.service-tables-header Home Renovation and Painting Services
+            h3.service-tables-header What do you need help with?
+
+        div#Home(class="main-section pure-g center")
+            //- ----------------------- -\\
+            //- ---- SERVICE TABLE ---- -\\
+            //- ----------------------- -\\
+            +service_table ("Renovations", hammer_logo, "#Renovation", "#Pricing")(class="service-table-header iks-reno")
+                li Room Makeovers
+                li Extensions
+                li Damage Repairs
+            +service_table ("Painting / Staining", paint_logo, "#Paint", "#Pricing")(class="service-table-header iks-paint")
+                li Interior / Exterior
+                li Hardwood Floors
+                li Windows / Doors
+            +service_table ("Lighting / Plumbing", light_logo, "#Light", "#Pricing")(class="service-table-header iks-light")
+                li Fixtures / Switches
+                li Drainage
+                li Leaks
+            +service_table ("Decks / Patios", deck_logo, "#Decks", "#Pricing")(class="service-table-header iks-deck")
+                li Design and Building
+                li Cleaning and Finishing
+                li Repair
+            +service_table ("Floors", floor_logo, "#Floor", "#Pricing")(class="service-table-header iks-floor")
+                li Tiles
+                li Hardwood
+                li Carpet
+            +service_table ("Bathrooms and Showers", shower_logo, "#Shower", "#Pricing")(class="service-table-header iks-shower")
+                li Custom Showers
+                li Sinks and Toilets
+                li Plumbing
+
+        //- ---------------------- -\\
+        //- ---- SERVICE INFO ---- -\\
+        //- ---------------------- -\\
+        div#Services(class="main-section pure-g center")
+            div(class="pure-u-1 left")
+                div.l-box
+                    h3.information-head Services
+                    p
+                        | IKS offers a complete renovation solution for your home. Services range from
+                        | repainting a room, all the way to building an extension on to your house, and
+                        | everything in between. There's rarely a job that we are unable to handle. We
+                        | offer free estimates and fast, but high quality service. Give us a call or send
+                        | us an email for more information.
+
+            //- ---------------- -\\
+            //- ---- RENO ---- -\\
+            //- ---------------- -\\
+            +service_icon ("Renovation", "Renovations", hammer_logo)(class="information-icon service-table-header iks-reno")
+            +service_info ("Renovation Services")
+                p
+                    | - Complete room makeovers<br />
+                    | - Extending buildings or resegmenting existing rooms <br />
+                    | - Patching holes and repairing damage <br />
+                p
+                    | If you have a project in mind for your home, we have a means of accomplising it.
+                    | We can transform that ratty guest bedroom into a magazine worthy dream room.
+                    | We can pour a footing and extend that room out giving you more space.
+                    | Anything that you can think of, we can do.
+
+            //- -------------- -\\
+            //- ---- PAINT ---- -\\
+            //- -------------- -\\
+            if (is_phone)
+                +service_icon ("Paint", "Painting / Staining", paint_logo)(class="information-icon service-table-header iks-paint")
+            +service_info ("Paiting / Staining Services")
+                p
+                    | - Patching and painting bedrooms, living rooms, etc. <br />
+                    | - Sanding and staining old hardwood floors to give them new life. <br />
+                    | - Sprucing up door and window frames. <br />
+                p
+                    | Whether it's interior or exterior, wood or drywall, we can cover it all. We can prepare
+                    | the surface for painting, no matter how uneven or damaged, and give it clean even paint
+                    | makeover. If you would rather refinish an old oak door with stain and varathane, that's
+                    | not a problem. Your floors take a beating after a while, and we can easily sand out all
+                    | sorts of scratches and divets, and give it a nice new protective coating.
+            if (!is_phone)
+                +service_icon ("Paint", "Painting / Staining", paint_logo)(class="information-icon service-table-header iks-paint")
+
+            //- --------------- -\\
+            //- ---- LIGHT ---- -\\
+            //- --------------- -\\
+            +service_icon ("Light", "Lighting / Plumbing", light_logo)(class="information-icon service-table-header iks-light")
+            +service_info ("Lighting / Plumbing Services")
+                p
+                    | - Installing new light fixtures. <br />
+                    | - Hooking up a new sink or toilet, or redoing an entire bathroom. <br />
+                    | - Finding pesty leaks and fixing them once and for all. <br />
+                p
+                    | Whether you want to install new light fixtures, change the switches in your house
+                    | or redo some wiring completely, IKS has qualified electricians to perform that work.
+                    | We also have skilled plumbers who can hook up any sink, shower or toilet to your
+                    | existing drainage and water. We can also find the source of the annoying drip and
+                    | provide you with a permanent solution.
+
+            //- ----------------- -\\
+            //- ---- DECK ---- -\\
+            //- ----------------- -\\
+            if (is_phone)
+                +service_icon ("Decks", "Decks / Patios", deck_logo)(class="information-icon service-table-header iks-deck")
+            +service_info ("Deck and Patio Services")
+                p
+                    | - Pressure washing, sanding and refinising and old deck. <br />
+                    | - Cleaning and patching stone walkways. <br />
+                    | - Extending or building a brand new deck for your home or pool. <br />
+                p
+                    | If you want to spruce up that greyed and weathered deck, and give a nice new glow, we can make that happen.
+                    | We can also repair rotten boards or extend the deck out giving you more room. We can also build a brand
+                    | new deck whether it's attached to your house, pool, or freestanding. IKS can also bring new life
+                    | to old stone walkways by pressure washing them and repairing any small or large cracks or loose stones.
+            if (!is_phone)
+                +service_icon ("Decks", "Decks / Patios", deck_logo)(class="information-icon service-table-header iks-deck")
+
+            //- ---------------------- -\\
+            //- ---- FLOOR ---- -\\
+            //- ---------------------- -\\
+            +service_icon ("Floor", "Floors", floor_logo)(class="information-icon service-table-header iks-floor")
+            +service_info ("Floor Services")
+                p
+                    | - Refinising old hardwood floors. <br />
+                    | - Laying down new tiles or hardwood floor. <br />
+                    | - Removing and installing new carpet <br />
+                p
+                    | We can bring a new glow to those old hardwood floors that are covered in scratches. We can also
+                    | remove and install a brand new hardwood floor, or tiles if you so choose. We can remove that old
+                    | dusty carpet from the bedroom and replace it with a new one.
+
+            //- ---------------------- -\\
+            //- ---- SHOWER ---- -\\
+            //- ---------------------- -\\
+            if (is_phone)
+                +service_icon ("Shower", "Bathrooms and Showers", shower_logo)(class="information-icon service-table-header iks-shower")
+            +service_info ("Bathroom and Shower Services")
+                p
+                    | - New custom tiled showers. <br />
+                    | - Replacing sinks and toilets. <br />
+                    | - Refinising outdated bathrooms. <br />
+                p
+                    | We can remove that old tub or shower unit and replace it with a one of the kind custom shower. Whether you want
+                    | just a shower or a tub installed as well, we can set up all of the plumbing required. All of the tile work
+                    | well be laid by professionals to ensure perfectly level and smooth surfaces. From floor to cieling, whether it's
+                    | marble tiles, porcelain tubs, we can handle it all.
+            if (!is_phone)
+                +service_icon ("Shower", "Bathrooms and Showers", shower_logo)(class="information-icon service-table-header iks-shower")
+
+        //- ---------------------- -\\
+        //- ---- PRICING INFO ---- -\\
+        //- ---------------------- -\\
+        div#Pricing(class="main-section pure-g")
+            div.pure-u-1
+                div.l-box
+                    h3.information-head Pricing
+                    p
+                        | In order to ensure a fair price, all of our estimates and final bills will be calculated
+                        | by man hours worked and materials used. We avoid giving quotes so that each party can
+                        | be sure it's a fair price. <br />
+                        | We start with the fee for the foreman of $30.00 an hour as well as for other licensed
+                        | professionals such as electricians. Use of additional workers will depend on the size
+                        | of the job and will be at a rate of $20.00 an hour.
+                    p
+                        | There are a number of ways to get in touch with us to set up an estimate. You can give us
+                        | a call at the number below or send us and email at renovations@iknowsomeone.co.
+
+                    div.pure-u-med-1
+                        table(class="pure-table iks-table iks-table-pricing")
+                            thead
+                                tr
+                                    td Type
+                                    td Price
+                            tbody
+                                +pricing_table_row ("iks-reno", "Foreman", "$30.00/hr")
+                                +pricing_table_row ("iks-paint", "Licensed Professional (electrician)", "$30.00/hr")
+                                +pricing_table_row ("iks-light", "Additional Workers", "$20.00/hr")
+                                +pricing_table_row ("iks-deck", "Materials", "Extra")
+                                +pricing_table_row ("iks-floor", "Large Equipment Rental", "Extra")
+
+
+                        div.center
+                            p
+                                | We accept payment from most major credit cards through the Square payment
+                                | system as well as cash and cheque.
+                            p
+                                a(href="http://www.squareup.com")
+                                    img(id="square_logo" src= square_logo)
+
+
+
+        //- -------------------- -\\
+        //- ---- CONTACT US ---- -\\
+        //- -------------------- -\\
+        div#Contact(class="main-section pure-g")
+            div.pure-u-1
+                div.l-box
+                    h3.information-head Contact
+                    p.information-body
+                        | IKS offers services in Montreal and Ottawa. To request a quote send us an email
+                        | or call us and we'll have an estimate ready for you within 12 hours.
+                    table(class="pure-table iks-table iks-table-contact")
+                        tbody
+                            tr
+                                td Email
+                                td
+                                    a(href="mailto:request@iknowsomeone.co?Subject=Request%20a%20Quote" target="_blank") request@iknowsomeone.co
+                            tr
+                                td Montreal
+                                td
+                                    a(href="tel:+15149692490") 514-969-2490
+                            tr
+                                td Ottawa
+                                td
+                                    a(href="tel:+16136195099") 613-619-5099
+                    p
+                        | IKS is also social! Feel free to ask us questions at any time on the following social media pages.
+
+                    table(class="pure-table iks-table iks-table-contact")
+                        tbody
+                            tr
+                                td Facebook
+                                td
+                                    a(target="_blank" href="http://www.facebook.com/iksservices") facebook.com/iksservices
+                            tr
+                                td Twitter
+                                td
+                                    a(a target="_blank" href="https://twitter.com/iksservices") twitter.com/iksservices
+
+//- ---------------- -\\
+//- ---- MIXINS ---- -\\
+//- ---------------- -\\
+
+mixin service_icon (id, title, logo)
+    div(id= id, class="pure-u-1 pure-u-med-1-4")
+        div(class!=attributes.class)
+            h2= title
+            img.service-table-icon(src= logo)
+
+mixin service_info (title)
+    div(class="pure-u-1 pure-u-med-3-4")
+        div(class="l-box information-body")
+            h3.information-head= title
+            block
+
+mixin service_table (title, logo, href, href2)
+    div(class="pure-u-1 pure-u-med-1-3")
+        div.service-table
+            div(class!=attributes.class)
+                h2= title
+                img(class="service-table-icon" src= logo)
+            ul.service-table-list
+                block
+            div(class="services pure-u-1-2")
+                button(class="button-choose pure-button" href= href) More Info
+            div(class="services pure-u-1-2")
+                button(class="button-choose pure-button" href= href2) Rates
+
+mixin pricing_table_row (color, category, base_price)
+    tr(class= color)
+        td= category
+        td.center= base_price

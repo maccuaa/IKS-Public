@@ -1,0 +1,15 @@
+{
+  "name": "IKS-node",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "express-device": "latest",
+    "jade": "latest",
+    "nodemailer": "latest",
+    "express-validator": "latest"
+  }
+}

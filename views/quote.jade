@@ -1,0 +1,128 @@
+div#Request-Quote-Form(class="modal-dialog")
+    div.modal-content
+        div.modal-body
+            form#General-Info.pure-form
+                fieldset
+                    legend Personal Information
+                    br
+                    div
+                        label(for="name") Name
+                        .controls
+                            input.pure-input-1-3(type="text", name="name", id="name", placeholder="Enter your name")
+                    br
+                    div
+                        label(for="email") Email
+                        .controls
+                            input.pure-input-1-3(type="email", name="email", id="email", placeholder="john@email.com")
+                    br
+                    div
+                        label(for="phone") Phone Number
+                        .controls
+                            input.pure-input-1-3(type="tel", name="phone", id="phone", placeholder="123-456-7890")
+                    br
+                    div
+                        label(for="city") City
+                        .controls
+                            input.pure-input-1-3(type="text", name="city", id="city", placeholder="Montreal or Ottawa")
+            form#Repair-Info.pure-form
+                fieldset 
+                    legend Repair Information
+                    div
+                        label(for="service") What do you need help with?
+                        .controls
+                            select.pure-input-1-2(name="service", id="service")
+                                option(value="") Select a service
+                                option(value="computer") Laptop / Computer
+                                option(value="wifi") Wifi
+                                option(value="smartphone") Android / iPhone
+                                option(value="printer") Printer
+                                option(value="home_theatre") Home Theatre
+                                option(value="gen_help") General Help / Other
+                    .problem
+                        br
+                        label(for="problem") Problem
+                        .controls
+                            select.pure-input-1-2(name="problem", id="problem")
+                                option(value="") What seems to be the issue?
+                                option(class="computer") Computer won't start
+                                option(class="computer") Computer is running slow
+                                option(class="computer") Computer keeps crashing
+                                option(class="computer") Computer part needs replacing
+                                option(class="computer") Certain features don't work
+                                option(class="computer") Computer has a virus
+                                option(class="computer") I lost my files
+                                option(class="computer") Operating system needs to be reinstalled
+                                option(class="wifi") Can't connect to Wifi
+                                option(class="wifi") I need help setting up my Wifi
+                                option(class="smartphone") I need help with my phone
+                                option(class="smartphone") The screen of my phone is broken
+                                option(class="printer") I need help setting up my printer
+                                option(class="printer") I need help connecting to my printer
+                                option(class="home_theatre") I need help setting up my home theatre
+                                option(class="gen_help") Other. Explain on next page
+                    .os
+                        br
+                        label(for="os") Operating System
+                        .controls
+                            select.pure-input-1-2(name="os", id="os")
+                                option(value="") Select Operating System
+                                option(value="windows" class="windows") Windows
+                                option(value="osx" class="osx") OSX
+                                option(value="linux" class="linux") Linux
+                    .osversion
+                        br
+                        label(for="osversion") Operating System
+                        .controls
+                            select.pure-input-1-2(name="osversion", id="osversion")
+                                option(value="") Version
+                                option(value="Windows XP" class="windows") Windows XP
+                                option(value="Windows Vista" class="windows") Windows Vista
+                                option(value="Windows 7" class="windows") Windows 7
+                                option(value="Windows 8" class="windows") Windows 8
+                                option(value="OSX Mountain Lion" class="osx") OSX Mountain Lion
+                                option(value="OSX Mavericks" class="osx") OSX Mavericks
+                                option(value="Ubuntu" class="linux") Ubuntu
+
+            form#Repair-Details.pure-form
+                fieldset
+                    legend Repair Details
+                    .form-grouping
+                        label(for="description") Write a brief description of the problem you are having with as much information as possible concerning the product in question (Make, Model, Product Number)
+                        .controls
+                            textarea.pure-input-1(name="description" id="description" rows="4" placeholder="Brief description")
+                    br
+                    .form-grouping
+                        label(for="date") Do you have a preferred date for IKS to visit you? (optional)
+                        .controls
+                            input.pure-input-1-3(type="date" name="date" id="date" placeholder="dd/mm/yyyy")
+            form#Confirmation-Page.pure-form
+                fieldset
+                    legend Confirmation
+                    p Please confirm the details are correct. An email will be sent to you with your request details, we will get back to you within 12 hours.
+                    .form-grouping
+                        p 
+                            input.pure-input-1-3(type="text", name="name", id="c_name", readonly="true" )
+                        p
+                            input.pure-input-1-3(type="text", name="email", id="c_email", readonly="true")
+                        p
+                            input.pure-input-1-3(type="text", name="phone", id="c_phone", readonly="true")
+                        p
+                            input.pure-input-1-3(type="text", name="city", id="c_city", readonly="true")
+                        p
+                            input.pure-input-1-3(type="text", name="problem", id="c_problem", readonly="true")
+                        p
+                            input.pure-input-1-3(type="text", name="os", id="c_os", readonly="true")
+                        p
+                            input.pure-input-1-3(type="text", name="date", id="c_date", readonly="true")
+                        p
+                            input.pure-input-1-3(type="text", name="desc", id="c_desc", readonly="true")
+
+        div#footer.modal-footer
+            ul.pager
+                li#prev.previous
+                    a(href="#") Previous
+                li#next.next
+                    a(href="#") Next
+                li#submit.next
+                    a(href="#") Submit
+    

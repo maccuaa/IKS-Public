@@ -1,0 +1,61 @@
+doctype html
+html(lang="eng")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="At IKS, we offer a unique approach to getting you connected to the services you need")
+        title !{title}
+        for js in javascript
+            script(src= js)
+
+        for css in stylesheets
+            link(rel="stylesheet", href= css)
+
+        block header
+    body
+        //- ------------------ -\\
+        //- ---- TOP MENU ---- -\\
+        //- ------------------ -\\
+        div.pure-menu.pure-menu-open.pure-menu-horizontal.pure-menu-fixed
+            ul#Top-Menu.pull-left.pure-u-1-2
+                li.top-bar: a(href="#Home") Home
+                if (is_not_about_page)
+                    li.top-bar: a(href="#Services") Services
+                    li.top-bar: a(href="#Pricing") Pricing
+                li.top-bar: a(href="#Contact") Contact
+            ul.pull-right
+                li: a(href="/") Tech
+                li: a(href="/reno") Renovations
+                li: a(href="/about-us") About Us
+
+
+        //- ---------------- -\\
+        //- ---- BANNER ---- -\\
+        //- ---------------- -\\
+        div.hero(class= banner)
+            div.hero-titles
+                h1.hero-site
+                    img(src= hero_logo)
+                h2.hero-tagline I Know Someone
+            //- div#Category(class="pure-u-1 category center")
+            //-    div(class="pure-u-1-12 category-item")
+            //-        a(href="#Laptop")
+            //-            img(src= pc_logo)
+            //-    div(class="pure-u-1-12 category-item")
+            //-        a(href="#Wifi")
+            //-            img(src= wifi_logo)
+            //-    div(class="pure-u-1-12 category-item")
+            //-        a(href="#Phone")
+            //-            img(src= phone_logo)
+            //-    div(class="pure-u-1-12 category-item")
+            //-        a(href="#Printer")
+            //-            img(src= printer_logo)
+            //-    div(class="pure-u-1-12 category-item")
+            //-        a(href="#HomeTheatre")
+            //-            img(src= tv_logo)
+
+        block content
+
+div(class="footer l-box")
+    p
+        | IKS 2014

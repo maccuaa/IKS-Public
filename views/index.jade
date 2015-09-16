@@ -1,0 +1,277 @@
+extends layout
+
+block content
+    //- ------------------------------- -\\
+    //- ---- REQUEST A QUOTE MODAL ---- -\\
+    //- ------------------------------- -\\
+    div#Quote-Modal(role="dialog")
+    div.l-content
+        div.main-section
+            h2.service-tables-header Computer and Technology Services
+            h3.service-tables-header What do you need help with?
+
+        div#Home(class="main-section pure-g center")
+            //- ----------------------- -\\
+            //- ---- SERVICE TABLE ---- -\\
+            //- ----------------------- -\\
+            +service_table ("Laptop / PC", pc_logo, "#Laptop")(class="service-table-header iks-green")
+                li Computer Repair
+                li Cleaning & Tuning
+                li OS Installation
+            +service_table ("Wifi", wifi_logo, "#Wifi")(class="service-table-header iks-blue")
+                li Wifi Setup
+                li Wifi Troubleshooting
+                li Wifi Help
+            +service_table ("Android / iPhone", phone_logo, "#Phone")(class="service-table-header iks-orange")
+                li Smartphone Setup
+                li Smartphone Troubleshooting
+                li Smartphone Help
+            +service_table ("Printers", printer_logo, "#Printer")(class="service-table-header iks-purple")
+                li Printer Setup
+                li Printer Troubleshooting
+                li Printer Help
+            +service_table ("Home Theatre", tv_logo, "#HomeTheatre")(class="service-table-header iks-red")
+                li Home Theatre Setup
+                li Home Theatre Troubleshooting
+                li Home Theatre Help
+            +service_table ("General Help", help_logo, "#General")(class="service-table-header iks-yellow")
+                li Tablet Help
+                li Laptop Purchasing Advice
+                li Backup Solutions
+
+        //- ---------------------- -\\
+        //- ---- SERVICE INFO ---- -\\
+        //- ---------------------- -\\
+        div#Services(class="main-section pure-g center")
+            div(class="pure-u-1 left")
+                div.l-box
+                    h3.information-head Services
+                    p
+                        | IKS offers a wide range of home technology services.  From laptops to
+                        | printers, your iPhone to your TV, whether you're setting it up for the
+                        | first time or it's acting up and you don't know why, IKS can help you. IKS
+                        | is both convenient and affordable.  We will arrange a time that is
+                        | convenient for you to come to your house to help you with any of the
+                        | services below.  You'll find our rates are much more agreeable than those
+                        | of any squad of geeks.
+
+            //- ---------------- -\\
+            //- ---- LAPTOP ---- -\\
+            //- ---------------- -\\
+            +service_icon ("Laptop", "Laptop / PC", pc_logo)(class="information-icon service-table-header iks-green")
+            +service_info ("Computer and Laptop Services")
+                p
+                    |- Frustrated at how long it takes to do anything? <br />
+                    | - Think your computer might have a virus? <br />
+                    |- Maybe it's completely broken! <br />
+                p
+                    | When your car is giving you problems or needs a tune up
+                    | you bring it in to a mechanic.  IKS is like a mechanic for
+                    |  your computer.  We'll diagnose and repair your computer so
+                    | that it's running like new again.  We replace broken parts,
+                    |  remove viruses, update software, reinstall operating systems,
+                    | remove unnecessary files and programs and lots more to have your
+                    |computer running at it's full potential.
+
+            //- -------------- -\\
+            //- ---- WIFI ---- -\\
+            //- -------------- -\\
+            if (is_phone)
+                +service_icon ("Wifi", "Wifi", wifi_logo)(class="information-icon service-table-header iks-blue")
+            +service_info ("Wifi Services")
+                p
+                    | - Setting up your new router but don't know the difference between WEP and WPA2? <br />
+                    | - Inconsistent connections throughout your house? <br />
+                    | - Having trouble connecting some devices but not others? <br />
+                p
+                    | For most people WIFI is just the magic that connects things to the
+                    | internet at your house.  IKS can setup your new router or configure
+                    | your existing one to make sure you're using the highest possible
+                    | security and maximizing the wireless coverage throughout your house.
+                    | When we're done that we'll even connect the devices in your house and
+                    | show you how to add more for when your friends or family come over and
+                    | want to connect to your wifi.
+            if (!is_phone)
+                +service_icon ("Wifi", "Wifi", wifi_logo)(class="information-icon service-table-header iks-blue")
+
+            //- --------------- -\\
+            //- ---- PHONE ---- -\\
+            //- --------------- -\\
+            +service_icon ("Phone", "Android / iPhone", phone_logo)(class="information-icon service-table-header iks-orange")
+            +service_info ("Android / iPhone Services")
+                p
+                    | - Confused by all the settings on your phone? <br />
+                    | - Don't know how to install an app? <br />
+                    | - Having trouble syncing music or pictures to your phone? <br />
+                p
+                    | IKS will sit down with you and show you the ins and outs of your phone
+                    |  and help set it up in a way that is easy and simple for you to use.
+
+            //- ----------------- -\\
+            //- ---- PRINTER ---- -\\
+            //- ----------------- -\\
+            if (is_phone)
+                +service_icon ("Printer", "Printers", printer_logo)(class="information-icon service-table-header iks-purple")
+            +service_info ("Printer Services")
+                p
+                    | - Setting up your new printer? <br />
+                    | - Printer not printing properly? <br />
+                    | - Feel like your printer is possessed? <br />
+                    | - Is your printer giving you a PC Load Error? <br />
+                p
+                    | Whether your printer is wireless or wired, uses ink or toner, lasers or
+                    |  phasers, IKS will set it up for you and show you how use it.
+            if (!is_phone)
+                +service_icon ("Printer", "Printers", printer_logo)(class="information-icon service-table-header iks-purple")
+
+            //- ---------------------- -\\
+            //- ---- HOME THEATRE ---- -\\
+            //- ---------------------- -\\
+            +service_icon ("HomeTheatre", "Home Theatre", tv_logo)(class="information-icon service-table-header iks-red")
+            +service_info ("Home Theatre Services")
+                p
+                    | - Don't know what an HDMI cable is? <br />
+                    | - No sound coming out of your speakers? <br />
+                    | - Want to setup netflix or stream content to your big screen? <br />
+                p
+                    | Home theatres are complex. You've got your TV, your sound system, your
+                    | blu-ray player, your cable/satellite receiver, your gaming consoles, there's
+                    |  cables everywhere and you're stressing out.  Don't. IKS knows how to clean up
+                    | that jungle of wires, connect everything properly and have your home theatre set
+                    | up in no time so you can get back to doing what you love best, relaxing and enjoying
+                    |  your favourite TV show or Movie.
+
+            //- ---------------------- -\\
+            //- ---- GENERAL HELP ---- -\\
+            //- ---------------------- -\\
+            if (is_phone)
+                +service_icon ("General", "General Help", help_logo)(class="information-icon service-table-header iks-yellow")
+            +service_info ("General Help Services")
+                p
+                    | Got a question or request that wasn't mentioned here? Send it to us and
+                    | we'll do our best to help you out!
+            if (!is_phone)
+                +service_icon ("General", "General Help", help_logo)(class="information-icon service-table-header iks-yellow")
+
+        //- ---------------------- -\\
+        //- ---- PRICING INFO ---- -\\
+        //- ---------------------- -\\
+        div#Pricing(class="main-section pure-g")
+            div.pure-u-1
+                div.l-box
+                    h3.information-head Pricing
+                    p
+                        | The base price for each service category includes a standard service such
+                        | as a computer tune-up or wifi configuration, the additional service will
+                        | cover any extra work you may want done to the device such as a backup or a
+                        | cleaning. Replacement hardware will be additional. Contact us for further
+                        | details.
+                    p
+                        | Getting help is quick and simple. Just click the Request an Estimate button below,
+                        | fill out the form and within 12 hours we will get back to you!
+
+                    div.pure-u-med-1
+                        table(class="pure-table iks-table iks-table-pricing")
+                            thead
+                                tr
+                                    td Service Category
+                                    td Base Price
+                                    td Additional Service
+                            tbody
+                                +pricing_table_row ("iks-green", "Laptop / Computer", "$60", "$20")
+                                +pricing_table_row ("iks-blue", "Wifi", "$40", "$20")
+                                +pricing_table_row ("iks-orange", "Android / iPhone", "$40", "$20")
+                                +pricing_table_row ("iks-purple", "Printers", "$45", "$20")
+                                +pricing_table_row ("iks-red", "Home Theatre", "$60", "$30")
+                                +pricing_table_row ("iks-yellow", "General Help", "--", "--")
+                        div(class="pure-u-med-1 center")
+                            button(class="quote button-choose pure-button") Request an Estimate
+
+                        div.center
+                            p
+                                | We accept payment from most major credit cards through the Square payment
+                                | system as well as cash and cheque.
+                            p
+                                a(href="http://www.squareup.com")
+                                    img(id="square_logo" src= square_logo)
+
+                        div.pure-u-med-1
+                            h3.information-head Specials
+                            p
+                                | We know what it's like to be in school. Money is tight and you need to eat.
+                                | We offer a 15% discount to College, Cegep and University students in Quebec and
+                                | Ontario.
+
+        //- -------------------- -\\
+        //- ---- CONTACT US ---- -\\
+        //- -------------------- -\\
+        div#Contact(class="main-section pure-g")
+            div.pure-u-1
+                div.l-box
+                    h3.information-head Contact
+                    p.information-body
+                        | IKS offers services in Montreal and Ottawa. To request a quote send us an email
+                        | or call us and we'll have an estimate ready for you within 12 hours.
+                    table(class="pure-table iks-table iks-table-contact")
+                        tbody
+                            tr
+                                td Email
+                                td
+                                    a(href="mailto:request@iknowsomeone.co?Subject=Request%20a%20Quote" target="_blank") request@iknowsomeone.co
+                            tr
+                                td Montreal
+                                td
+                                    a(href="tel:+15149692490") 514-969-2490
+                            tr
+                                td Ottawa
+                                td
+                                    a(href="tel:+16136195099") 613-619-5099
+                    p
+                        | IKS is also social! Feel free to ask us questions at any time on the following social media pages.
+
+                    table(class="pure-table iks-table iks-table-contact")
+                        tbody
+                            tr
+                                td Facebook
+                                td
+                                    a(target="_blank" href="http://www.facebook.com/iksservices") facebook.com/iksservices
+                            tr
+                                td Twitter
+                                td
+                                    a(a target="_blank" href="https://twitter.com/iksservices") twitter.com/iksservices
+
+//- ---------------- -\\
+//- ---- MIXINS ---- -\\
+//- ---------------- -\\
+
+mixin service_icon (id, title, logo)
+    div(id= id, class="pure-u-1 pure-u-med-1-4")
+        div(class!=attributes.class)
+            h2= title
+            img.service-table-icon(src= logo)
+
+mixin service_info (title)
+    div(class="pure-u-1 pure-u-med-3-4")
+        div(class="l-box information-body")
+            h3.information-head= title
+            block
+
+mixin service_table (title, logo, href)
+    div(class="pure-u-1 pure-u-med-1-3")
+        div.service-table
+            div(class!=attributes.class)
+                h2= title
+                img(class="service-table-icon" src= logo)
+            ul.service-table-list
+                block
+
+            div(class="services pure-u-1-2")
+                button(class="button-choose pure-button" href= href) More Info
+            div(class="pure-u-1-2")
+                button(class="quote button-choose pure-button") Get Help
+
+mixin pricing_table_row (color, category, base_price, add_price)
+    tr(class= color)
+        td= category
+        td.center= base_price
+        td.center= add_price

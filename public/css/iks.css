@@ -1,0 +1,506 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+html,
+button,
+input,
+select,
+textarea {
+    font-family: 'Raleway', sans-serif;
+}
+
+h2, h3 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+/*
+ * -- IKS COLOURS --
+ * Choose a different color based on the type of pricing table.
+ */
+.iks-green {
+    background: #519251;
+}
+
+.iks-blue {
+    background: #2c4985;
+}
+
+.iks-orange {
+    background: #FF9933;
+}
+
+.iks-purple {
+    background: #A653CF;
+}
+
+.iks-red {
+    background: #E62E00;
+}
+
+.iks-yellow {
+    background: #FFCC00;
+}
+
+.iks-error {
+    color: #E9322D;
+    padding-left: 10px;
+}
+
+
+.iks-reno {
+    background: #754719;
+}
+
+.iks-paint {
+    background: #193B7C;
+}
+
+.iks-deck {
+    background: #197519;
+}
+
+.iks-light {
+    background: #E68A00;
+}
+
+.iks-floor {
+    background: #990000;
+}
+
+.iks-shower {
+    background: #1975FF;
+}
+
+
+/*
+ * -- Layout Styles --
+ */
+
+.l-content {
+    margin: 0 auto;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+.center {
+    text-align:center;
+}
+
+.left {
+    text-align: left;
+}
+
+ .main-section {
+    max-width: 980px;
+    margin: 0 auto;
+ }
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+/*
+ * -- MENU STYLES --
+ *
+ * Make the menu have a very faint box-shadow.
+ *
+ */
+.pure-menu {
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+.pure-menu a {
+    font-size: 16px;
+}
+
+.active {
+    background: #EEE;
+}
+
+/*
+ * -- BANNER --
+ *
+ * The top banner with the headings. By using a combination
+ * of `display: table;` and `display: table-cell;`, we can
+ * vertically center the text.
+ *
+ */
+
+.banner {
+    background: transparent url('/img/banner2.jpg') 0 0 no-repeat;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/banner2.jpg', sizingMethod='scale');
+
+    height: 260px;
+    width: 100%;
+    display: table;
+    margin-top: 1.8em;
+}
+
+.about-banner {
+    color: #4D4D4D;
+    background: #4D4D4D none 0 0 no-repeat;
+    text-align: center;
+    background-size: cover;
+    height: 326px;
+    width: 100%;
+    display: table;
+    margin-top: 1.8em;
+}
+
+
+.reno-banner {
+    background: transparent url('/img/reno-banner.jpg') 0 0 no-repeat;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/reno-banner.jpg', sizingMethod='scale');
+
+    height: 260px;
+    width: 100%;
+    display: table;
+    margin-top: 1.8em;
+}
+
+.category {
+    margin-bottom:20px;
+}
+.category-item {
+    width:100px;
+}
+.category-item img {
+    height: 45px;
+}
+.hero {
+    text-align: center;
+}
+
+    .hero-titles {
+        font-family: 'Raleway', sans-serif;
+        margin: 1em auto;
+        padding: 0 2em;
+        max-width: 768px;
+    }
+    .hero-site {
+        font-size: 800%;
+        font-weight:100;
+        padding-top: 10px;
+        margin: 0;
+        color: #fff;
+    }
+    .hero-tagline {
+        font-size: 250%;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0 0 0.5em;
+        color: #aaa;
+    }
+
+/*
+ * -- SERVICE TABLE WRAPPER --
+ *
+ * This element wraps up all the pricing table elements
+ *
+ */
+
+.service-tables {
+
+    text-align: center;
+}
+
+.service-tables-header {
+    text-align: center;
+    font-weight: 400;
+}
+
+/*
+ * -- PRICING TABLE  --
+ *
+ * Every pricing table has the .service-table class
+ *
+ */
+.service-table {
+    border: 1px solid #ddd;
+    margin: 0 0.5em 2em;
+    padding: 0 0 3em;
+}
+
+.service-table button {
+    position: relative;
+    bottom: -1.5em;
+}
+
+/*
+ * -- PRICING TABLE HEADER --
+ *
+ * By default, a header is black/white, and has some styles for its <h2> name.
+ *
+ */
+.service-table-header {
+    color: #fff;
+    height: 200px;
+}
+    .service-table-header h2 {
+        margin: 0;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+.service-table-icon {
+    max-width: 40%;
+    max-height: 110px;
+}
+
+
+/*
+ * -- PRICING TABLE LIST --
+ *
+ * Each pricing table has a <ul> which is denoted by the .service-table-list class
+ *
+ */
+.service-table-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/*
+ * -- PRICING TABLE LIST ELEMENTS --
+ *
+ * Styles for the individual list elements within each pricing table
+ *
+ */
+.service-table-list li {
+    font-family: 'Raleway', sans-serif;
+    padding: 0.8em 0;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+
+/*
+ * -- TABLE BUTTON --
+ *
+ * Styles for the "Choose" button at the bottom of a pricing table.
+ * This inherits from Pure Button.
+ *
+ */
+.button-choose {
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+/*
+ *
+ * Services Information
+ *
+ */
+
+.information-head {
+    margin-top: 0.5em;
+    color: black;
+    font-weight: 500;
+}
+
+.information-icon {
+    border: 1px solid #ddd;
+    margin: 1em 0.5em;
+    padding: 0 0;
+}
+
+.information-body {
+    text-align: left;
+}
+
+/*
+ *
+ * PRICING TABLE
+ *
+ */
+
+.iks-table {
+    margin: 1em auto;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+    .iks-table th,
+    .iks-table td {
+        padding: 12px 18px;
+        border-left: 1px solid #FFF;
+    }
+
+    .iks-table .center {
+        text-align: center;
+    }
+
+.iks-table-pricing {
+    color: #FFF;
+}
+
+.iks-table-contact td {
+    border-left: 1px solid #cbcbcb;
+}
+
+.iks-table-contact a:link,
+.iks-table-contact a:visited {
+    text-decoration:none;
+    color: #0000DD;
+}
+
+#square_logo {
+    height: 130px;
+}
+
+/*
+ *
+ * Request a Quote Form Overrides
+ *
+ */
+#Request-Quote-Form #footer {
+    padding: 0 20px;
+}
+
+
+/*
+ *
+ * FOOTER
+ *
+ */
+
+.footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+    margin-top: 1em;
+}
+    .footer a {
+        color: #ddd;
+    }
+
+
+/*
+ * -- FONTS --
+ *
+ */
+
+@font-face{
+	font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Raleway Thin'), local('Raleway-Thin'),
+            url('fonts/Raleway/Raleway-Thin.woff') format('woff'),
+            url('fonts/Raleway/Raleway-Thin.eot'),
+	        url('fonts/Raleway/Raleway-Thin.eot?iefix') format('eot'),
+            url('fonts/Raleway/Raleway-Thin.ttf') format('truetype'),
+            url('fonts/Raleway/Raleway-Thin.svg#webfont') format('svg');
+}
+
+@font-face{
+	font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'),
+            url('fonts/Raleway/Raleway-ExtraLight.woff') format('woff'),
+            url('fonts/Raleway/Raleway-ExtraLight.eot'),
+	        url('fonts/Raleway/Raleway-ExtraLight.eot?iefix') format('eot'),
+            url('fonts/Raleway/Raleway-ExtraLight.ttf') format('truetype'),
+            url('fonts/Raleway/Raleway-ExtraLight.svg#webfont') format('svg');
+}
+
+@font-face{
+	font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Raleway Light'), local('Raleway-Light'),
+            url('fonts/Raleway/Raleway-Light.woff') format('woff'),
+            url('fonts/Raleway/Raleway-Light.eot'),
+	        url('fonts/Raleway/Raleway-Light.eot?iefix') format('eot'),
+            url('fonts/Raleway/Raleway-Light.ttf') format('truetype'),
+            url('fonts/Raleway/Raleway-Light.svg#webfont') format('svg');
+}
+
+@font-face{
+	font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway Regular'), local('Raleway-Regular'),
+            url('fonts/Raleway/Raleway-Regular.woff') format('woff'),
+            url('fonts/Raleway/Raleway-Regular.eot'),
+	        url('fonts/Raleway/Raleway-Regular.eot?iefix') format('eot'),
+            url('fonts/Raleway/Raleway-Regular.ttf') format('truetype'),
+            url('fonts/Raleway/Raleway-Regular.svg#webfont') format('svg');
+}
+
+@font-face{
+	font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Raleway Medium'), local('Raleway-Medium'),
+            url('fonts/Raleway/Raleway-Medium.woff') format('woff'),
+            url('fonts/Raleway/Raleway-Medium.eot'),
+	        url('fonts/Raleway/Raleway-Medium.eot?iefix') format('eot'),
+            url('fonts/Raleway/Raleway-Medium.ttf') format('truetype'),
+            url('fonts/Raleway/Raleway-Medium.svg#webfont') format('svg');
+}
+
+/*
+ * -- PHONE MEDIA QUERIES --
+ * On phones, we want to reduce the height and font-size of the banner further
+ */
+@media screen and (max-width: 640px) {
+
+    .category-item{
+        width:19%;
+
+    }
+
+    .pure-menu {
+        font-size: 80%;
+    }
+
+    .banner {
+        margin-top: 3em;
+        height: inherit;
+    }
+    
+     .reno-banner {
+        margin-top: 3em;
+        height: inherit;
+    }
+
+    .hero-titles {
+        font-size: 50%;
+    }
+
+    .service-table-icon {
+        max-height: 50%;
+    }
+
+    .iks-table-contact {
+        font-size: 75%;
+    }
+}
+
